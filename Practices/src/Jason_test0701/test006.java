@@ -1,6 +1,5 @@
 package Jason_test0701;
 
-import java.awt.List;
 
 public class test006<T> {
 	T field;
