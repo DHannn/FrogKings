@@ -49,10 +49,10 @@ public class test0013 {
 		//´´½¨»º´æÇø
 		ByteBuffer bytebuffer = ByteBuffer.allocate(1024);
 		byte[] buffer = bytebuffer.array();
-		while (Math.random()%2 == 1) {
+		while (true) {
 			bytebuffer.clear(); // clear buffer space and prepare for new data 
-			fin.read(buffer);
-			if (buffer.length < 1) {
+			int r = fin.read(buffer);
+			if (r == -1) {
 				break;
 			}
 			bytebuffer.flip();
