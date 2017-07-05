@@ -6,25 +6,24 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PipedInputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 public class test0013 {
 
 	public static void main(String[] args) throws IOException  {
-		String filename1 = "D:"+File.separator+"Jason_test"+File.separator+"test0704-copy.txt";
+		String filename1 = "D:"+File.separator+"Jason_test"+File.separator+"test0704.docx";
 		String filename2 = "D:"+File.separator+"Jason_test"+File.separator+"test0704.txt";
 		
-		File f = new File(filename1);
-		try {
-			f.createNewFile();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Fail To Create File.");
-		}
-		f = null;
+//		File f = new File(filename1);
+//		try {
+//			f.createNewFile();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//			System.out.println("Fail To Create File.");
+//		}
+//		f = null;
 //		f.delete();    //删除指定文件 “f可唯一锁定操作文件”
 		test0013 t013 = new test0013();
 		t013.readFromFile(filename2);
@@ -33,12 +32,11 @@ public class test0013 {
 	
 	void copyToFile(String filename1, String filename2) throws IOException{
 		//获取文件和目标文件的输入输出流
-		FileInputStream fin = new FileInputStream(filename2);
+		FileInputStream fin = new FileInputStream(filename1);  //inputStream是写入流，是数据接收端
 		FileOutputStream fout = null;
 		try {
-			fout = new FileOutputStream(filename1);
+			fout = new FileOutputStream(filename2);  //outStream是输出流，是数据输送端
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -46,17 +44,17 @@ public class test0013 {
 		FileChannel pin = fin.getChannel();
 		FileChannel pout = fout.getChannel();
 		
-		//创建缓存区
-		ByteBuffer bytebuffer = ByteBuffer.allocate(1024);
+		//创建缓存区并预分配缓存区空间
+		ByteBuffer bytebuffer = ByteBuffer.allocate(1024);  
 		byte[] buffer = bytebuffer.array();
 		while (true) {
-			bytebuffer.clear(); // clear buffer space and prepare for new data 
+			bytebuffer.clear(); // 清除缓存区数据，
 			int r = fin.read(buffer);
 			if (r == -1) {
 				break;
 			}
 			bytebuffer.flip();
-			fout.write(buffer);
+			fout.write(buffer);  //将byte[]数组buffer的数据通过FileOutStream.write(byte[])方法写到outStream中的指定文件中去
 		}
 	}
 	
