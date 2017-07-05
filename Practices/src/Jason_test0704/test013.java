@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class test0013 {
+public class test013 {
 
 	public static void main(String[] args) throws IOException  {
 		String filename1 = "D:"+File.separator+"Jason_test"+File.separator+"test0704.docx";
@@ -25,7 +25,7 @@ public class test0013 {
 //		}
 //		f = null;
 //		f.delete();    //删除指定文件 “f可唯一锁定操作文件”
-		test0013 t013 = new test0013();
+		test013 t013 = new test013();
 		t013.readFromFile(filename2);
 		t013.copyToFile(filename2, filename1);
 	}
