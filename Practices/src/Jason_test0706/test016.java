@@ -1,5 +1,11 @@
 package Jason_test0706;
 
+
+/**
+ * ¿ËÂ¡Á·Ï°
+ * @author Jason Green
+ *
+ */
 public class test016 implements Cloneable{
 	String TeamName;
 	int stuNum;
