@@ -1,0 +1,25 @@
+同学们好，本周的课堂练习代码已经上传了，请参考。
+
+课后作业（1）：================================
+实现JDBCDao类，提供以下功能：
+类：	JDBCDao	提供数据库操作	备考
+成员变量：
+	driver	驱动	从配置文件中读取
+	url	db的link	
+	username	用户名	
+	password	密码	
+	connection	数据库连接	
+API：
+	void init()	读取配置文件	
+	void connect()	建立连接	
+	void disconnect()	关闭连接	
+	void excuteQuery(String sql)	执行查询功能	
+	void excuteUpdate(String sql)	执行更新功能（插入，删除，更新）	
+	void excuteBacth(String sql，List dataList)	执行批处理的功能	
+类：	JDBCDaoTest	调用JDBCDao	
+
+课后作业（2）：=================================
+使用多线程，从一个大文件中找出指定的单词的出现次数。
+方案：把文件分成若干个部分，每个线程处理一部分，然后再把每个线程的处理结果汇总；
+需要使用的技术：（1）随机文件读取；（2）多线程；（3）字符串查找
+PS：课堂上讨论方案是提到的：读数据超过边界（两部份数据交界的地方要避免重复处理），以及被检索单词跨两个数据块被漏处理的问题 也要考虑进去；

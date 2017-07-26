@@ -1,0 +1,34 @@
+工程1：Day_5_Teacher （JSP基本语法，jsp跳转，request，session，application使用）
+http://192.168.130.128:8080/Day_5_Teacher/
+http://192.168.130.128:8080/Day_5_Teacher/index.jsp
+http://192.168.130.128:8080/Day_5_Teacher/MyFirstJsp.jsp
+http://192.168.130.128:8080/Day_5_Teacher/MyFirstJsp.jsp?cnt=1
+http://192.168.130.128:8080/Day_5_Teacher/BaseJsp.jsp
+
+工程1_2：day_5（JSP取得HTTP头部，图像放大缩小）
+http://192.168.130.128:8080/day_5/myjsp01.jsp
+http://192.168.130.128:8080/day_5/animation.jsp?width=200&height=200
+
+工程2：FirstSevlet（Sevlet直接调用，间接调用，Sevlet跳转）
+C:\Documents and Settings\Administrator\Workspaces\MyEclipse 7.0\FirstSevlet
+http://192.168.130.128:8080/FirstSevlet/MyHtml.html
+http://192.168.130.128:8080/FirstSevlet/HelloWorld
+http://192.168.130.128:8080/FirstSevlet/showparam
+http://192.168.130.128:8080/FirstSevlet/startcount
+
+工程3：FirstJstl（标准标签库）
+C:\Documents and Settings\Administrator\Workspaces\MyEclipse 7.0\FirstJstl
+jstl.jar  standard.jar
+
+工程4：TestServlet(课后作业参考答案 )
+  用JSP+Servlet 编写一个能捕获用户输入的程序，要求如下：
+  input.jsp页面表单中可输入key名称和value值，并提交到TestServlet
+  TestServlet，捕获表单提交信息后转回input.jsp回显
+http://192.168.130.128:8080/Teacher_serverlet/index.jsp
+
+工程5：Teacher_errJsp（JSP异常处理）
+http://192.168.130.128:8080/ServletPractic/Teacher_errJsp/index.jsp
+http://192.168.130.128:8080/ServletPractic/Teacher_errJsp/errtest.jsp
+
+工程6：Teacher_fileter（JSP中使用过滤器）
+http://192.168.130.128:8080/ServletPractic/Teacher_fileter/DisplayHeader.java
