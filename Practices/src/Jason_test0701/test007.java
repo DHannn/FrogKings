@@ -9,9 +9,9 @@ import java.util.Properties;
 
 public class test007{
 	public static void main(String[] args) {
-		File newFile = new File("D:\\test\\config.properties");
+		File newFile = new File("D:\\test027\\config.properties");
 		if(!newFile.exists()){
-			newFile.mkdirs();   //ÐÂ½¨ÎÄ¼þ¼Ð
+			newFile.mkdirs();   //ï¿½Â½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 		}
 		if(newFile.exists()){
 			newFile.delete();
@@ -20,15 +20,15 @@ public class test007{
 	}
 	
 	void function07() throws Exception{
-		String confPath="d:\\test\\config.properties";
+		String confPath="d:\\test027\\config.properties";
 		 InputStream fin=new FileInputStream(confPath);		 
 		 Properties props = new Properties();		 
-        props.load(fin); //ÏÈloadÀÏµÄkey-value  
+        props.load(fin); //ï¿½ï¿½loadï¿½Ïµï¿½key-value  
 		 OutputStream fos = new FileOutputStream(confPath); 
-        props.setProperty("username", "ÉÏÌìÀ¿ÔÂ");
+        props.setProperty("username", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         //username=\u4E0A\u5929\u63FD\u6708 
         props.setProperty("password", "6666");//password=6666
-        props.store(fos, "ÎÞÔòÐ´Èë¡¢´æÔÚÔòÐÞ¸Ä");
+        props.store(fos, "ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ë¡¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½");
 
 	}
 
