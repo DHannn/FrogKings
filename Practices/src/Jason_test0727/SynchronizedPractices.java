@@ -1,7 +1,5 @@
 package Jason_test0727;
 
-import javax.security.auth.login.AccountException;
-
 public class SynchronizedPractices {
 
 	public double num;
